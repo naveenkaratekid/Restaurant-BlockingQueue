@@ -1,0 +1,45 @@
+
+
+{"dateOrdered":"2018-08-20", "profileID":10}
+
+
+Create Customer
+
+http://localhost:8080/orders/customer/
+
+In Postman, click Headers tab, and Set key to Content-Type, and Value to application/json
+
+--------------------------------------------------------------------------------------------
+Create Customer
+
+http://localhost:8080/orders/customer/
+{"customerName":"Emily","email":"emily@cs1.ed.edu","address":"1944 Jackson Rd Union City, CA 94537","phoneNumber":"15343230279"}
+
+--------------------------------------------------------------------------------------------
+create customer order
+http://localhost:8080/orders/customer/order
+Postman headers body: {"dateOrdered":"2018-10-13", "profileID":20}	
+
+--------------------------------------------------------------------------------------------
+order item
+http://localhost:8080/orders/customer/order/item
+Postman headers body: {"itemID":21,"orderID":114, "quantity": 3}
+
+http://localhost:8080/orders/customer/order/{ordernum}
+
+
+{"itemID":21,"orderID":114, "quantity": 3}
+
+--------------------------------------------------------------------------------------------
+Get food menu
+http://localhost:8080/orders/customer/order/menu
+
+--------------------------------------------------------------------------------------------
+Get order details from customer
+http://localhost:8080/orders/customer/order/{orderID}/details
+
+--------------------------------------------------------------------------------------------
+Get customer profile
+http://localhost:8080/orders/customer/{profileID}
+
+
