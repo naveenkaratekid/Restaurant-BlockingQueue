@@ -17,16 +17,19 @@ Customers can order food from a menu in a PostGreSQL database using Postman.
 --------------------------------------------------------------------------------------------
 Create Customer Profile: createCustomer()
 POST /orders/customer/
-{"customerName":"{name}","email":"{email}","address":"{address}","phoneNumber":"{phone}"}
+
+Postman headers body: {"customerName":"{name}","email":"{email}","address":"{address}","phoneNumber":"{phone}"}
 
 --------------------------------------------------------------------------------------------
 Create customer order: createCustomerOrder()
 POST /orders/customer/order
+
 Postman headers body: {"dateOrdered":"yyyy-MM-dd", "profileID":{profileID}}	
 
 --------------------------------------------------------------------------------------------
 Order item from menu: addItemToOrder()
 POST /orders/customer/order/item
+
 Postman headers body: {"itemID":{itemID},"orderID":{orderID}, "quantity": {quantity}}
 
 --------------------------------------------------------------------------------------------
@@ -38,7 +41,7 @@ Get entire food menu: getEntireMenu()
 GET /orders/customer/order/menu
 
 --------------------------------------------------------------------------------------------
-Get order details from customer
+Get order details from customer: getOrderDetails()
 GET /orders/customer/order/{orderID}/details
 
 --------------------------------------------------------------------------------------------
